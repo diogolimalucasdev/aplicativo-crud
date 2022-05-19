@@ -4,6 +4,7 @@ import {
     View,
     StyleSheet,
     FlatList,
+    Alert
 } from 'react-native';
 import Constants from 'expo-constants';
 import { ListItem, Avatar, Button,  Icon } from 'react-native-elements'
@@ -12,6 +13,26 @@ import users from './data/users'
 
 export default props => {
     // console.warn('error') //ajuda com que o error apareça na tela do celular para ajudar no debug
+    
+
+
+    //função bem simples de deletar o usuario 
+    function confirmUserDeletion(user){
+        Alert.alert('Excluir Usuario', 'Deseja excluir o usuario?', [
+            {
+                text: 'Sim',
+                onPress(){
+                    console.warn('delete' + user.id )
+                }
+            },
+
+            {
+                text: 'Não'
+            }
+
+        ])
+    }
+
 
     function getActions(user) {
         return (
@@ -23,7 +44,7 @@ export default props => {
                 />
 
                 <Button
-                    onPress={() => props.navigation.navigate('UserForm', user)}
+                    onPress={() => confirmUserDeletion(user)}
                     type='clear'
                     icon={<Icon name='delete' size={25} color='red' />}
                 />
