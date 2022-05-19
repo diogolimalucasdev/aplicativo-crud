@@ -14,4 +14,4 @@ export default [
         avatarUrl: 
         'https://cdn.pixabay.com/photo/2016/09/01/08/24/smiley-1635448_960_720.png',
     }
-]
+];

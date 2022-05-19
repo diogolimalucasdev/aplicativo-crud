@@ -1,20 +1,14 @@
 import * as React from 'react';
-import {
-    Text,
-    View,
-    StyleSheet,
-    FlatList,
-    Alert
-} from 'react-native';
+import {View,FlatList,Alert} from 'react-native';
 import Constants from 'expo-constants';
 import { ListItem, Avatar, Button,  Icon } from 'react-native-elements'
-// import Icon from 'react-native-vector-icons/FontAwesome';
-import users from './data/users'
+import UsersContext from '../context/UsersContext';
 
 export default props => {
     // console.warn('error') //ajuda com que o error apareça na tela do celular para ajudar no debug
     
-
+     const {state } = React.useContext(UsersContext)
+    //  console.warn(Object.keys(ctx.state))
 
     //função bem simples de deletar o usuario 
     function confirmUserDeletion(user){
@@ -86,7 +80,7 @@ export default props => {
 
             <FlatList
                 keyExtractor={user => user.id.toString()}
-                data={users}
+                data={state.users}
                 renderItem={getUserItem} //Passo apenas a referencia, que é minha função.Ele vai acessar minha função, onde na minha função eu estou buscando os usuarios
             />
 

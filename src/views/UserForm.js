@@ -18,7 +18,7 @@ export default ({ route, navigation }) => {
             <TextInput
                 style={style.input}
                 //crio um campod e input, onde permito que o usuario escreva um novo nome
-                //apartir dai, chamo a função setUser, copio todos os parametros de user e subescrevo ele udando o name
+                //apartir dai, chamo a função setUser, copio todos os parametros de user e subescrevo ele editando o name
                 onChangeText={name => setUser({ ...user, name })}
                 placeholder="Informe o Nome"
                 value={user.name}
@@ -30,7 +30,7 @@ export default ({ route, navigation }) => {
             <TextInput
                 style={style.input}
                 //crio um campod e input, onde permito que o usuario escreva um novo nome
-                //apartir dai, chamo a função setUser, copio todos os parametros de user e subescrevo ele udando o email
+                //apartir dai, chamo a função setUser, copio todos os parametros de user e subescrevo ele editando o email
                 onChangeText={email => setUser({ ...user, email })}
                 placeholder="Informe o Nome"
                 value={user.email}
@@ -42,7 +42,7 @@ export default ({ route, navigation }) => {
             <TextInput
                 style={style.input}
                 //crio um campod e input, onde permito que o usuario escreva um novo nome
-                //apartir dai, chamo a função setUser, copio todos os parametros de user e subescrevo ele udando o urldoavatar
+                //apartir dai, chamo a função setUser, copio todos os parametros de user e subescrevo ele editando o urldoavatar
                 onChangeText={avatarUrl => setUser({ ...user, avatarUrl })}
                 placeholder="Informe o Nome"
                 value={user.avatarUrl}
