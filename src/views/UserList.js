@@ -7,7 +7,7 @@ import UsersContext from '../context/UsersContext';
 export default props => {
     // console.warn('error') //ajuda com que o error apareça na tela do celular para ajudar no debug
     
-     const {state } = React.useContext(UsersContext)
+     const {state, dispatch } = React.useContext(UsersContext)
     //  console.warn(Object.keys(ctx.state))
 
     //função bem simples de deletar o usuario 
@@ -16,7 +16,10 @@ export default props => {
             {
                 text: 'Sim',
                 onPress(){
-                    console.warn('delete' + user.id )
+                    dispatch({
+                        type: 'deleteUser',
+                        payload: user,
+                    })
                 }
             },
 

@@ -4,14 +4,22 @@ export default [
         id: 1,
         name: "Diogo",
         email: "diogo@email.com",
-        avatarUrl: 
-        'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png',
+        avatarUrl:
+            'https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_960_720.png',
     },
     {
         id: 2,
-        name: "laryssa",
-        email: "laryssa@email.com",
-        avatarUrl: 
-        'https://cdn.pixabay.com/photo/2016/09/01/08/24/smiley-1635448_960_720.png',
+        name: "teste",
+        email: "teste@email.com",
+        avatarUrl:
+            'https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_960_720.png',
+    },
+
+    {
+        id: 3,
+        name: "teste2",
+        email: "teste2@email.com",
+        avatarUrl:
+            'https://cdn.pixabay.com/photo/2014/04/03/10/32/businessman-310819_960_720.png',
     }
 ];

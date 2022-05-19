@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Text, View, TextInput, StyleSheet } from 'react-native'
 import { Button } from 'react-native-elements'
+import UsersContext from '../context/UsersContext'
 // import { TextInput } from 'react-native-gesture-handler'
 
 export default ({ route, navigation }) => {
@@ -11,6 +12,8 @@ export default ({ route, navigation }) => {
     //utilizando o useState vejo se  algo esta vindo e se estiver deixo o que esta vindo como o valor incial, como é um edit o primeiro valor é o incial
     //e se nao estiver vindo nada eu permito que ele cadastre um novo usuario
     const [user, setUser] = useState(route.params ? route.params : {})
+
+    const {dispatch} =  React.useContext(UsersContext)
     return (
         // <Text>{user.id}</Text>
         <View style={style.form}>
@@ -51,6 +54,10 @@ export default ({ route, navigation }) => {
             <Button
                 title="Salvar"
                 onPress={() => {
+                    dispatch({
+                        type: user.id ? 'updateUser' : 'createUser',
+                        payload: user,
+                    })
                     navigation.goBack()
                 }}
 
