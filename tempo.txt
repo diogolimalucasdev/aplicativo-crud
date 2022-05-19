@@ -1,0 +1,7 @@
+39:42
+
+
+link starckorveflow
+
+https://stackoverflow.com/questions/67556962/listitem-not-rendering-data-in-react-native/67557352#67557352
+https://stackoverflow.com/questions/67556962/listitem-not-rendering-data-in-react-native/67557352#67557352
